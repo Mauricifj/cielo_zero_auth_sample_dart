@@ -86,7 +86,7 @@ class ZeroAuthFormState extends State<ZeroAuthForm> {
                         if (value.isEmpty) {
                           return 'Name can\'t be null';
                         }
-                        if (value.length > 22) {
+                        if (value.length > 35) {
                           return 'Dom Pedro II, is that you?';
                         }
                         return null;
