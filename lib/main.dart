@@ -33,7 +33,7 @@ class ZeroAuthFormState extends State<ZeroAuthForm> {
   final _controllerCardNumber = TextEditingController();
   final _controllerExpirationMonth = TextEditingController();
   final _controllerExpirationYear = TextEditingController();
-  final _controllerSecutiryCode = TextEditingController();
+  final _controllerSecurityCode = TextEditingController();
   String _brand = 'Master';
   String _paymentMethod = 'Credit';
   bool _saveCard = false;
@@ -52,7 +52,7 @@ class ZeroAuthFormState extends State<ZeroAuthForm> {
     _controllerCardNumber.dispose();
     _controllerExpirationMonth.dispose();
     _controllerExpirationYear.dispose();
-    _controllerSecutiryCode.dispose();
+    _controllerSecurityCode.dispose();
     super.dispose();
   }
 
@@ -176,7 +176,7 @@ class ZeroAuthFormState extends State<ZeroAuthForm> {
                   Padding(
                     padding: const EdgeInsets.all(16.0),
                     child: TextFormField(
-                      controller: _controllerSecutiryCode,
+                      controller: _controllerSecurityCode,
                       maxLines: 1,
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
@@ -244,7 +244,7 @@ class ZeroAuthFormState extends State<ZeroAuthForm> {
                               String expirationDate =
                                   "${_controllerExpirationMonth.text}/${_controllerExpirationYear.text}";
                               String securityCode =
-                                  _controllerSecutiryCode.text;
+                                  _controllerSecurityCode.text;
 
                               ZeroAuthRequest request = ZeroAuthRequest(
                                 holder: holder,
